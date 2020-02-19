@@ -1,0 +1,9 @@
+  - name: Install Packages
+    apt: 
+      name={{packages}}
+    vars:
+      packages:
+        - htop
+        - mc
+        - tmux
+
