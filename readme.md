@@ -6,5 +6,5 @@ https://opensource.com/article/18/3/manage-your-workstation-configuration-ansibl
 
 ## How to run
 ```
-ansible-pull -U https://github.com/LearnLinuxTV/personal_ansible_desktop_configs.git
+ansible-pull -U https://github.com/surfermc/ansible.git
 ```
