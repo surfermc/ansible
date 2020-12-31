@@ -22,3 +22,10 @@
       - wget
       - whois
 
+- name: software | remove unneeded workstation packages on debian and ubuntu hosts
+  tags: cleanup,packages,workstation-packages
+  package:
+    state: absent
+    name:
+      - gnote
+      - thunderbird*
