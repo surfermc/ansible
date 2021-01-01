@@ -1,3 +1,12 @@
+- name: software | unofficial  | copy launcher
+  tags: apps,appimage,software,kdenlive
+  copy:
+    src: users/jay/kdenlive.desktop
+    dest: /home/martin/.local/share/applications/unofficial-sonos.desktop
+    owner: jay
+    group: jay
+    mode: 0700
+
 - name: software | unofficial sonos controller | install package
   get_url:
     url: https://github.com/pascalopitz/unoffical-sonos-controller-for-linux/releases/download/v0.2.2/sonos-controller-unofficial-0.2.2.AppImage
