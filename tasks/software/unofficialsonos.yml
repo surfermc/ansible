@@ -1,10 +1,10 @@
-- name: software | unofficial  | copy launcher
-  tags: apps,appimage,software,kdenlive
+- name: software | unofficial sonos controller | copy launcher
+  tags: apps,appimage,software,unofficial-sonos
   copy:
-    src: users/jay/kdenlive.desktop
+    src: desktop/unofficial-sonos.desktop
     dest: /home/martin/.local/share/applications/unofficial-sonos.desktop
-    owner: jay
-    group: jay
+    owner: martin
+    group: martin
     mode: 0700
 
 - name: software | unofficial sonos controller | install package
