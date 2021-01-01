@@ -5,13 +5,12 @@
     name:
       - colordiff
       - curl
-      - ffmpeg
+      - flatpak
       - gparted
       - htop
       - lsof
       - luckybackup
       - mc
-      - mediainfo
       - mosh
       - ncdu
       - neofetch
@@ -20,13 +19,21 @@
       - ranger
       - rsync
       - screen
-      - sox
       - sshfs
       - traceroute
       - ttf-mscorefonts-installer
       - wget
       - whois
       - x2goclient
+
+- name: software packages | audio / video utilities
+  tags: packages
+  package:
+    state: latest
+    name:
+      - ffmpeg
+      - sox
+      - mediainfo
 
 - name: software | remove unneeded workstation packages on debian and ubuntu hosts
   tags: cleanup,packages,workstation-packages
