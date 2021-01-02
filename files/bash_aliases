@@ -13,7 +13,7 @@ alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
 alias mkdir='mkdir -pv'
 
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
-alias weather='curl wttr.in'
+alias weather='curl wttr.in/Sherborne'
 alias extip='curl icanhazip.com'
 
 
