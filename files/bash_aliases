@@ -9,13 +9,23 @@ alias la='ls -A'
 alias l='ls -CF' 
 alias l.='ls -a | egrep "^\."'
 
+alias df='df -h -x squashfs -x tmpfs -x devtmpfs'
+alias mkdir='mkdir -pv'
+
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -'
+alias weather='curl wttr.in'
+alias extip='curl icanhazip.com'
+
 
 # reload bash config
 alias reload="source ~/.bashrc"
 
-alias df='df -h'
+# alias df='df -h'
 alias cp='cp -i'
 alias free='free -m'
 
 alias cls='clear'
+
+alias update='sudo apt update'
+alias upgrade='sudo apt update && sudo apt dist-upgrade && sudo apt autoremove && sudo apt clean'
+alias install='sudo apt install'
