@@ -1,13 +1,13 @@
    - name: copy custom .bashrc file
      copy:
-       src: files/bashrc
+       src: ./files/bashrc
        dest: /home/martin/.bashrc
        owner: martin
        group: martin
 
    - name: copy custom .bash_aliases file
      copy:
-       src: files/bash_aliases
+       src: ./files/bash_aliases
        dest: /home/martin/.bashrc
        owner: martin
        group: martin
