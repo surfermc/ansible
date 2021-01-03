@@ -1,3 +1,7 @@
+# Flatpaks
 - import_tasks: software/spotify.yml
+- import_tasks: software/vlc.yml
+
+# Appimages
 - import_tasks: software/openshot.yml
 - import_tasks: software/unofficialsonos.yml

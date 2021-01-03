@@ -1,0 +1,11 @@
+- name: software | vlc | install package
+  tags: packages,flatpak,vlc,workstation-packages
+  become_user: martin
+  flatpak:
+    name: org.videolan.VLC
+    method: user
+    state: present
+
+#  when:
+#    - vlc is defined
+#    - vlc == true

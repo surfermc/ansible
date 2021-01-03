@@ -1,4 +1,5 @@
 - name: software | openshot | install package
+  tags: packages,flatpak,openshot,workstation-packages
   get_url:
     url: https://github.com/OpenShot/openshot-qt/releases/download/v2.5.1/OpenShot-v2.5.1-x86_64.AppImage
     dest: /home/martin/bin/openshot.app
