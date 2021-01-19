@@ -8,6 +8,6 @@
 - name: copy custom .bash_aliases file
   copy:
     src: ./files/bash_aliases
-    dest: /home/martin/.bashrc
+    dest: /home/martin/.bash_aliases
     owner: martin
     group: martin
