@@ -14,3 +14,6 @@
     mode: '0700'
     owner: martin
     group: martin
+
+# would be useful to pull in the latest version
+# curl   -H "Accept: application/vnd.github.v3+json"   https://api.github.com/repos/pascalopitz/unoffical-sonos-controller-for-linux/releases/latest
