@@ -1,6 +1,8 @@
 # Flatpaks
 - import_tasks: software/spotify.yml
 - import_tasks: software/vlc.yml
+- import_tasks: software/darktable.yml
+- import_tasks: software/discord.yml
 
 # Appimages
 - import_tasks: software/openshot.yml

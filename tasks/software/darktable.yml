@@ -1,0 +1,7 @@
+- name: software | darktable | install package
+  tags: packages,flatpak,darktable,workstation-packages
+  become_user: martin
+  flatpak:
+    name: org.darktable.Darktable
+    state: present
+

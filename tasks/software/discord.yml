@@ -1,0 +1,7 @@
+- name: software | discord | install package
+  tags: packages,flatpak,discord,workstation-packages
+  become_user: martin
+  flatpak:
+    name: com.discordapp.Discord
+    state: present
+
