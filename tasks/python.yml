@@ -3,7 +3,7 @@
     name: 
       - github3.py
       - soco
-      - rapid-photo-downloader
+#      - rapid-photo-downloader
 
 - name: Python | Install system packages
   apt:
