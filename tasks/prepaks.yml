@@ -7,3 +7,6 @@
 # Appimages
 - import_tasks: software/openshot.yml
 - import_tasks: software/unofficialsonos.yml
+
+# Installers to be run later
+- import_tasks: software/rpd.yml

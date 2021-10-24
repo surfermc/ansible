@@ -1,0 +1,9 @@
+- name: software | Rapid Photo Downloader | Download install script
+  tags: packages,flatpak,rapid-photo-downloader,workstation-packages
+  become_user: martin
+  get_url:
+    url: "https://launchpad.net/rapid/pyqt/0.9.27a3/+download/install.py"
+    dest: /home/martin/Downloads/rpdinstall.py
+    mode: '0700'
+    owner: martin
+    group: martin
