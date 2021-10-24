@@ -35,3 +35,7 @@ sudo ansible-pull -U https://github.com/surfermc/ansible.git
 ### Full example
 
 <https://github.com/LearnLinuxTV/personal_ansible_desktop_configs>
+
+## Other examples
+
+<https://github.com/brpaz/my-linux-setup>
