@@ -3,6 +3,11 @@
 - import_tasks: software/vlc.yml
 - import_tasks: software/darktable.yml
 - import_tasks: software/discord.yml
+- import_tasks: software/inkscape.yml
+- import_tasks: software/libreoffice.yml
+- import_tasks: software/viber.yml
+- import_tasks: software/handbrake.yml
+- import_tasks: software/bitwarden.yml
 
 # Appimages
 - import_tasks: software/openshot.yml

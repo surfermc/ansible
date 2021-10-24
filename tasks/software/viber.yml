@@ -1,0 +1,6 @@
+- name: software | viber | install package
+  tags: packages, flatpak, viber, workstation-packages
+  become_user: martin
+  flatpak: 
+    name: com.viber.Viber
+    state: present

@@ -1,0 +1,6 @@
+- name: software | handbrake | install package
+  tags: packages, flatpak, handbrake, workstation-packages
+  become_user: martin
+  flatpak: 
+    name: fr.handbrake.ghb
+    state: present

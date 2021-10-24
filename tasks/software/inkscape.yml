@@ -1,0 +1,6 @@
+- name: software | inkscape | install package
+  tags: packages, flatpak, inkscape, workstation-packages
+  become_user: martin
+  flatpak: 
+    name: org.inkscape.Inkscape
+    state: present
