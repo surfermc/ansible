@@ -10,6 +10,7 @@
   tasks:
     - include: tasks/users.yml
     - include: tasks/packages.yml
+    - include: tasks/python.yml
     - include: tasks/cron.yml
     - include: tasks/prepaks.yml
     - include: tasks/dotfiles.yml
