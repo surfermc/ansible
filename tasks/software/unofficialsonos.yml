@@ -8,7 +8,7 @@
 
 - name: "Unofficial Sonos Controller | Download and install"
   get_url:
-    url: "https://github.com/pascaloptiz/unoffical-sonos-controller-for-linux/releases/download/v{{ release.tag[1:] }}/sonos-controller-unofficial-{{ release.tag[1:] }}.AppImage"
+    url: "https://github.com/pascalopitz/unoffical-sonos-controller-for-linux/releases/download/v{{ release.tag[1:] }}/sonos-controller-unofficial-{{ release.tag[1:] }}.AppImage"
     dest: /home/martin/bin/unofficialsonos.app
     mode: '0700'
     owner: martin
