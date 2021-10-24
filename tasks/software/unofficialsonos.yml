@@ -1,3 +1,19 @@
+- name: Unofficial Sonos Controller | Get Latest version
+  tags: apps,appimage,software,unofficial-sonos
+  github_release:
+    user: pascalopitz
+    repo: unoffical-sonos-controller-for-linux
+    action: latest_release
+  register: release
+
+- name: "Unofficial Sonos Controller | Download and install"
+  get_url:
+    url: "https://github.com/pascaloptiz/unoffical-sonos-controller-for-linux/releases/download/v{{ release.tag[1:] }}/sonos-controller-unofficial-{{ release.tag[1:] }}.AppImage"
+    dest: /home/martin/bin/unofficialsonos.app
+    mode: '0700'
+    owner: martin
+    group: martin
+
 - name: software | unofficial sonos controller | copy launcher
   tags: apps,appimage,software,unofficial-sonos
   copy:
@@ -6,14 +22,3 @@
     owner: martin
     group: martin
     mode: 0700
-
-- name: software | unofficial sonos controller | install package
-  get_url:
-    url: https://github.com/pascalopitz/unoffical-sonos-controller-for-linux/releases/download/v0.2.7/sonos-controller-unofficial-0.2.7.AppImage
-    dest: /home/martin/bin/unofficialsonos.app
-    mode: '0700'
-    owner: martin
-    group: martin
-
-# would be useful to pull in the latest version
-# curl   -H "Accept: application/vnd.github.v3+json"   https://api.github.com/repos/pascalopitz/unoffical-sonos-controller-for-linux/releases/latest
