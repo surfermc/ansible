@@ -3,6 +3,7 @@
   become_user: martin
   flatpak:
     name: org.videolan.VLC
+    method: user 
     state: present
 
 #  when:
