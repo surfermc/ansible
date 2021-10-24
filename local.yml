@@ -25,7 +25,7 @@
     apt:
       autoclean: yes
     changed_when: false
-    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Limux Mint"]
+    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
 
   - name: autoremove orphan packages (debian and ubuntu)
     tags: always
