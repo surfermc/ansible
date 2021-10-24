@@ -15,3 +15,21 @@
     - include: tasks/prepaks.yml
     - include: tasks/dotfiles.yml
 
+
+# end of run cleanup and reporting
+- hosts: localhost
+  become: true
+  tasks:
+  - name: cleanup package cache (debian and ubuntu)
+    tags: always
+    apt:
+      autoclean: yes
+    changed_when: false
+    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Limux Mint"]
+
+  - name: autoremove orphan packages (debian and ubuntu)
+    tags: always
+    apt:
+      autoremove: yes
+      purge: yes
+    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
