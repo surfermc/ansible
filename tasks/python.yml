@@ -4,9 +4,3 @@
       - github3.py
       - soco
 #      - rapid-photo-downloader
-
-- name: Python | Install system packages
-  apt:
-    name: python3-ansible-lint
-    state: present
-  become: true
