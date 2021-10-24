@@ -1,4 +1,4 @@
-- name: Software | Unofficial Sonos Controller | Get Latest version
+- name: Software  | Unofficial Sonos Controller | Get Latest version
   tags: apps,appimage,software,unofficial-sonos
   github_release:
     user: pascalopitz
