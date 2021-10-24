@@ -9,7 +9,7 @@
 
 - name: software | unofficial sonos controller | install package
   get_url:
-    url: https://github.com/pascalopitz/unoffical-sonos-controller-for-linux/releases/download/v0.2.8/sonos-controller-unofficial-0.2.8.AppImage
+    url: https://github.com/pascalopitz/unoffical-sonos-controller-for-linux/releases/download/v0.2.7/sonos-controller-unofficial-0.2.7.AppImage
     dest: /home/martin/bin/unofficialsonos.app
     mode: '0700'
     owner: martin
