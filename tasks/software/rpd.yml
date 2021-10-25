@@ -9,4 +9,5 @@
     group: martin
 
 - name: execute RPD py script
+  become_user: martin
   command: /home/martin/Downloads/rpdinstall.py
