@@ -13,5 +13,8 @@
 - import_tasks: software/openshot.yml
 - import_tasks: software/unofficialsonos.yml
 
+# Deb packages
+- import_tasks: software/rpi-imager.yml
+
 # Installers to be run later
 - import_tasks: software/rpd.yml
