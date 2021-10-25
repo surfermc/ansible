@@ -4,9 +4,29 @@
   become: true
 
   pre_tasks:
-    - name: update repositories
-      apt: update_cache=yes
-      changed_when: False
+  - name: pre-run | update repositories
+    apt: update_cache=yes
+    changed_when: False
+    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
+
+# run roles
+- hosts: all
+  tags: base
+  become: true
+  roles:
+    - base
+
+- hosts: workstation
+  tags: workstation
+  become: true
+  roles:
+    - workstation
+
+- hosts: server
+  tags: server
+  become: true
+  roles:
+    - server
 
   tasks:
     - include: tasks/users.yml
