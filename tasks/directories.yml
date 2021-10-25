@@ -1,0 +1,8 @@
+- name: ansible create directories 
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: 'martin'
+    group: 'martin'
+  with_items:
+    - '/home/martin/bin'
