@@ -3,5 +3,5 @@ Name=Unoffical Sonos Controller
 Exec=/home/martin/bin/unofficialsonos.app
 Comment=Unoffical Sonos Controller
 Terminal=false
-Icon=/home/martin/bin/icons/sonos.png
+Icon=/home/martin/bin/sonos.png
 Type=Application
