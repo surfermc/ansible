@@ -1,5 +1,6 @@
-- name : Install rpi-imager from .deb file
+- name: install | rpi-imager from .deb file
+  tags: packages, deb, rpi-imager, workstation-packages
   apt: 
-  - deb=https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb
-  - state=present 
-  - update_cache=true
+    deb: https://downloads.raspberrypi.org/imager/imager_latest_amd64.deb
+    state: present 
+    update_cache: true
