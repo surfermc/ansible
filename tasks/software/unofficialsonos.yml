@@ -22,3 +22,10 @@
     owner: martin
     group: martin
     mode: 0700
+
+- name: copy custom sonos image file
+  copy:
+    src: desktop/icons/sonos.png
+    dest: /home/martin/bin/sonos.png
+    owner: martin
+    group: martin
