@@ -1,11 +1,5 @@
 - name: copy file
   copy:
-    src: ./files/x2go_lxde.pmg
-    dest: /home/martin/Downloads/lxde.png
-    owner: martin
-    group: martin
-
-  copy:
     src: ./files/x2goclientsessions
     dest: /home/martin/.x2goclient/sessions
     owner: martin
