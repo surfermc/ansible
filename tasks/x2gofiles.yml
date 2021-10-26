@@ -16,10 +16,11 @@
 - name: x2go | copy png icon files
   copy: 
     src: ./files/{{ item }} 
-    dest: /home/martin/.x2goclient
+    dest: /home/martin/.x2goclient/
     owner: martin
     group: martin
-    with_items:
-      - x2go_lxde.png
-      - x2go_mate.png
-      - x2go_xfce.png
+    mode: u=rw, g=rw, o=r
+  with_items:
+    - x2go_lxde.png
+    - x2go_mate.png
+    - x2go_xfce.png
