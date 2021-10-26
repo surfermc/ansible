@@ -47,3 +47,8 @@
       - thunderbird*
       - mosh
       - libreoffice*
+
+- name: config | ensure flatpak repo are configured
+  tags: workstation-packages
+  ansible.builtin.command:
+    cmd: flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
