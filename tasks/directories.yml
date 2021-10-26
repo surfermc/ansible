@@ -8,3 +8,4 @@
     - '/home/martin/bin'
     - '/home/martin/.ansible'
     - '/home/martin/.ansible/tmp'
+    - '/home/martin/.local/share/applications'
