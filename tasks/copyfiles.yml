@@ -1,6 +1,6 @@
 - name: copy file
   copy:
-    src: ./files/x2goclientsessions
+    src: ./files/x2goclient_sessions
     dest: /home/martin/.x2goclient/sessions
     owner: martin
     group: martin
