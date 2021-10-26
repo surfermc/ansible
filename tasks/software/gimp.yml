@@ -1,0 +1,6 @@
+- name: software | gimp
+  tags: packages, flatpak, gimp, workstation-packages
+  become_user: martin
+  flatpak: 
+    name: org.gimp.GIMP
+    state: present

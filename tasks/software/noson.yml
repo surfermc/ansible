@@ -1,0 +1,6 @@
+- name: software | noson
+  tags: packages, flatpak, noson, workstation-packages
+  become_user: martin
+  flatpak: 
+    name: io.github.janbar.noson
+    state: present

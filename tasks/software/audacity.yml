@@ -1,0 +1,6 @@
+- name: software | audacity
+  tags: packages, flatpak, audacity, workstation-packages
+  become_user: martin
+  flatpak: 
+    name: org.audacityteam.Audacity
+    state: present
