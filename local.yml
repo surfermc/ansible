@@ -17,6 +17,7 @@
     - include: tasks/cron.yml
     - include: tasks/prepaks.yml
     - include: tasks/dotfiles.yml
+    - include: tasks/copyfiles.yml
 
   post_tasks:
   - name: cleanup package cache (debian and ubuntu)

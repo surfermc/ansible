@@ -1,0 +1,23 @@
+- name: copy file
+  copy:
+    src: ./files/x2go_lxde.pmg
+    dest: /home/martin/Downloads/lxde.png
+    owner: martin
+    group: martin
+
+  copy:
+    src: ./files/x2goclientsessions
+    dest: /home/martin/.x2goclient/sessions
+    owner: martin
+    group: martin
+
+- name: copy png files
+  copy: 
+    src: ./files/{{ item }} 
+    dest: /home/martin/Downloads/
+    owner: martin
+    group: martin
+    with_items:
+      - x2go_lxde.png
+      - x2go_mate.png
+      - x2go_xfce.png
