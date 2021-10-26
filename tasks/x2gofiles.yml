@@ -16,7 +16,7 @@
 - name: x2go | copy png icon files
   copy: 
     src: ./files/{{ item }} 
-    dest: /home/martin/.x2goclient/
+    dest: /home/martin/.x2goclient
     owner: martin
     group: martin
     with_items:
