@@ -1,14 +1,22 @@
-- name: copy file
+- name: X2go create directory
+  file:
+    path: /home/martin/.x2goclient
+    state: directory
+    owner: martin
+    group: martin
+    mode: 0775
+
+- name: x2go copy sessions file
   copy:
     src: ./files/x2goclient_sessions
     dest: /home/martin/.x2goclient/sessions
     owner: martin
     group: martin
 
-- name: copy png files
+- name: x2go copy png icon files
   copy: 
     src: ./files/{{ item }} 
-    dest: /home/martin/Downloads/
+    dest: /home/martin/.x2goclient/
     owner: martin
     group: martin
     with_items:
