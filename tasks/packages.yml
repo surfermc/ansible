@@ -8,7 +8,7 @@
       - flatpak
       - gparted
       - htop
-      - lsof
+      #- lsof
       - luckybackup
       - mc
       - ncdu
@@ -17,10 +17,12 @@
       - nmap
       - python3
       - python3-pip
-      - ranger
+      #- ranger
       - rsync
-      - screen
+      #- screen
       - sshfs
+      - terminator
+      - tmux
       - traceroute
       - ttf-mscorefonts-installer
       - wget
@@ -35,13 +37,6 @@
       - ffmpeg
       - sox
       - mediainfo
-
-#- name: software packages | raspberry pi 
-#  tags: packages,pi
-#  package:
-#    state: latest
-#    name:
-#      - rpi-imager
 
 - name: software | remove unneeded workstation packages on debian and ubuntu hosts
   tags: cleanup,packages,workstation-packages
