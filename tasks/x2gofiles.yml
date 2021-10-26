@@ -19,7 +19,6 @@
     dest: /home/martin/.x2goclient/
     owner: martin
     group: martin
-    mode: u=rw, g=rw, o=r
   with_items:
     - x2go_lxde.png
     - x2go_mate.png
