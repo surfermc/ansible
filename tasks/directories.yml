@@ -6,3 +6,5 @@
     group: 'martin'
   with_items:
     - '/home/martin/bin'
+    - '/home/martin/.ansible'
+    - '/home/martin/.ansible/tmp'
