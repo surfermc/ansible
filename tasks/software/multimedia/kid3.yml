@@ -1,0 +1,6 @@
+- name: software | kid3 | install package
+  tags: packages, flatpak, kid3, workstation-packages
+  become_user: martin
+  flatpak:
+    name: org.kde.kid3
+    state: present
