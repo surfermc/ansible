@@ -4,7 +4,7 @@
   become: true
 
   pre_tasks:
-  - name: pre-run | update repositories
+  - name: pre-run | update repositories (debian and ubuntu)
     apt: update_cache=yes
     changed_when: False
     when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
@@ -17,17 +17,17 @@
     - include: tasks/cron.yml
     - include: tasks/prepaks.yml
     - include: tasks/dotfiles.yml
-    - include: tasks/x2gofiles.yml
+    - include: tasks/configs.yml
 
   post_tasks:
-  - name: cleanup package cache (debian and ubuntu)
+  - name: post-run | cleanup package cache (debian and ubuntu)
     tags: always
     apt:
       autoclean: yes
     changed_when: false
     when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
 
-  - name: autoremove orphan packages (debian and ubuntu)
+  - name: post-run | autoremove orphan packages (debian and ubuntu)
     tags: always
     apt:
       autoremove: yes
