@@ -1,4 +1,4 @@
-- name: ansible create directories 
+- name: Create | Directories 
   file:
     path: "{{ item }}"
     state: directory
@@ -6,6 +6,6 @@
     group: 'martin'
   with_items:
     - '/home/martin/bin'
-    - '/home/martin/.ansible'
+#    - '/home/martin/.ansible'
     - '/home/martin/.ansible/tmp'
     - '/home/martin/.local/share/applications'
