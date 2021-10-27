@@ -1,0 +1,15 @@
+- name: terminator | create config directory
+  file:
+    path: /home/martin/.config/terminator
+    state: directory
+    owner: martin
+    group: martin
+    mode: 0775
+
+- name: terminator | copy config file
+  copy:
+    src: ./files/terminator_config
+    dest: /home/martin/.config/terminator/config
+    owner: martin
+    group: martin
+

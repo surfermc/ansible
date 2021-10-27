@@ -1,4 +1,4 @@
-- name: X2go | create directory
+- name: x2go | create directory
   file:
     path: /home/martin/.x2goclient
     state: directory
