@@ -15,7 +15,7 @@
 
 - name: terminator | set as default terminal
   dconf:
-    key: "/org/cinammon/desktop/applications/terminal/exec"
+    key: "/org/cinnamon/desktop/applications/terminal/exec"
     value: "'terminator'"
     state: present
   when: ansible_distribution in ["Linux Mint"]
