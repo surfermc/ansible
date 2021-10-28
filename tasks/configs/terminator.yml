@@ -15,6 +15,7 @@
 
 - name: terminator | set as default terminal
   dconf:
+    become: martin
     key: "/org/cinnamon/desktop/applications/terminal/exec"
     value: "'terminator'"
     state: present
@@ -22,6 +23,7 @@
 
 - name: image | set as default terminal
   dconf:
+    become: martin
     key: "/org/cinnamon/desktop/background/picture-uri"
     value: "'file:///usr/share/backgrounds/linuxmint-ulyssa/jmsdono_big_sur.jpg'"
     state: present
