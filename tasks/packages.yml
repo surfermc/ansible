@@ -3,6 +3,7 @@
   package:
     state: latest
     name:
+      - code
       - colordiff
       - curl
       - flatpak
