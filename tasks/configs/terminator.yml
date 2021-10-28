@@ -12,19 +12,4 @@
     dest: /home/martin/.config/terminator/config
     owner: martin
     group: martin
-
-- name: terminator | set as default terminal
-  dconf:
-    become: martin
-    key: "/org/cinnamon/desktop/applications/terminal/exec"
-    value: "'terminator'"
-    state: present
-  when: ansible_distribution in ["Linux Mint"]
-
-- name: image | set as default terminal
-  dconf:
-    become: martin
-    key: "/org/cinnamon/desktop/background/picture-uri"
-    value: "'file:///usr/share/backgrounds/linuxmint-ulyssa/jmsdono_big_sur.jpg'"
-    state: present
-  #when: ansible_distribution in ["Linux Mint"]
+    
