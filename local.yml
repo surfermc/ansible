@@ -4,6 +4,23 @@
   become: true
 
   pre_tasks:
+  - name: "apt | ensure Google linux signing key present"
+    apt_key: url=https://dl-ssl.google.com/linux/linux_signing_key.pub state=present
+
+  - name: "apt | ensure Google chrome repo present"
+    apt_repository:
+      repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+      filename: "google-chrome"
+      state: present
+      update_cache: yes
+
+  - name: "apt | ensure Google Earth Pro repo present"
+    apt_repository:
+      repo: "deb [arch=amd64] http://dl.google.com/linux/earth/deb/ stable main"
+      filename: "google-earth-pro"
+      state: present
+      update_cache: yes
+
   - name: pre-run | update repositories (debian and ubuntu)
     apt: update_cache=yes
     changed_when: False
