@@ -25,4 +25,4 @@
     key: "/org/cinnamon/desktop/background/picture-uri"
     value: "'file:///usr/share/backgrounds/linuxmint-ulyssa/jmsdono_big_sur.jpg'"
     state: present
-  when: ansible_distribution in ["Linux Mint"]
+  #when: ansible_distribution in ["Linux Mint"]
