@@ -1,24 +1,24 @@
 # Flatpaks
-- import_tasks: software/multimedia/spotify.yml
-- import_tasks: software/multimedia/vlc.yml
-- import_tasks: software/multimedia/noson.yml
-- import_tasks: software/multimedia/audacity.yml
-- import_tasks: software/graphics/darktable.yml
-- import_tasks: software/internet/discord.yml
-- import_tasks: software/graphics/inkscape.yml
-- import_tasks: software/graphics/gimp.yml
-- import_tasks: software/libreoffice.yml
-- import_tasks: software/internet/viber.yml
-- import_tasks: software/multimedia/handbrake.yml
-- import_tasks: software/bitwarden.yml
+#- import_tasks: software/multimedia/spotify.yml
+#- import_tasks: software/multimedia/vlc.yml
+#- import_tasks: software/multimedia/noson.yml
+#- import_tasks: software/multimedia/audacity.yml
+#- import_tasks: software/graphics/darktable.yml
+#- import_tasks: software/internet/discord.yml
+#- import_tasks: software/graphics/inkscape.yml
+#- import_tasks: software/graphics/gimp.yml
+#- import_tasks: software/libreoffice.yml
+#- import_tasks: software/internet/viber.yml
+#- import_tasks: software/multimedia/handbrake.yml
+#- import_tasks: software/bitwarden.yml
 - import_tasks: software/multimedia/kid3.yml
 
 # Appimages
 #- import_tasks: software/openshot.yml
-- import_tasks: software/multimedia/unofficialsonos.yml
+#- import_tasks: software/multimedia/unofficialsonos.yml
 
 # Deb packages
-- import_tasks: software/rpi-imager.yml
+#- import_tasks: software/rpi-imager.yml
 
 # Installers to be run later
-- import_tasks: software/graphics/rpd.yml
+#- import_tasks: software/graphics/rpd.yml
