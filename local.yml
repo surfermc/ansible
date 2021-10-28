@@ -4,52 +4,6 @@
   become: true
 
   pre_tasks:
-  - name: apt | Google Linux signing key
-    apt_key: 
-      url: https://dl-ssl.google.com/linux/linux_signing_key.pub 
-      state: present
-
-  - name: apt | add Google Chrome repo
-    apt_repository:
-      repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
-      filename: "google-chrome"
-      state: present
-#      update_cache: yes
-
-  - name: apt | add Google Earth Pro repo 
-    apt_repository:
-      repo: "deb [arch=amd64] http://dl.google.com/linux/earth/deb/ stable main"
-      filename: "google-earth-pro"
-      state: present
-#      update_cache: yes
-
-  - name: apt | Add Microsoft signing key
-    apt_key:
-      url: https://packages.microsoft.com/keys/microsoft.asc
-      state: present
-    when: ansible_os_family == "Debian"
-
-  - name: apt | add Microsoft VScode repo
-    apt_repository:
-      repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-      filename: "vscode"
-      state: present
-      update_cache: yes
-
-  - name: apt | Add Scooter Software signing key
-    apt_key:
-      url: http://www.scootersoftware.com/RPM-GPG-KEY-scootersoftware
-      state: present
-    when: ansible_os_family == "Debian"
-
-  - name: apt | add Beyond Compare repo
-    apt_repository:
-      repo: "deb https://www.scootersoftware.com/ bcompare4 non-free"
-      filename: "scootersoftware"
-      state: present
-      update_cache: yes
-
-# deb https://www.scootersoftware.com/ bcompare4 non-free
 
   - name: pre-run | update repositories (debian and ubuntu)
     apt: update_cache=yes
@@ -57,7 +11,8 @@
     when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
 
   tasks:
-    - include: tasks/users.yml
+    - include: tasks/repo.yml
+#    - include: tasks/users.yml
     - include: tasks/directories.yml
     - include: tasks/packages.yml
     - include: tasks/python.yml
