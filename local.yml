@@ -23,7 +23,7 @@
       state: present
 #      update_cache: yes
 
-  - name: apt | Add Microsoft APT key
+  - name: apt | Add Microsoft signing key
     apt_key:
       url: https://packages.microsoft.com/keys/microsoft.asc
       state: present
@@ -32,9 +32,24 @@
   - name: apt | add Microsoft VScode repo
     apt_repository:
       repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-      filename: "google-earth-pro"
+      filename: "vscode"
       state: present
       update_cache: yes
+
+  - name: apt | Add Scooter Software signing key
+    apt_key:
+      url: http://www.scootersoftware.com/RPM-GPG-KEY-scootersoftware
+      state: present
+    when: ansible_os_family == "Debian"
+
+  - name: apt | add Beyond Compare repo
+    apt_repository:
+      repo: "deb https://www.scootersoftware.com/ bcompare4 non-free"
+      filename: "scootersoftware"
+      state: present
+      update_cache: yes
+
+# deb https://www.scootersoftware.com/ bcompare4 non-free
 
   - name: pre-run | update repositories (debian and ubuntu)
     apt: update_cache=yes
