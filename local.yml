@@ -8,7 +8,8 @@
   - name: pre-run | update repositories (debian and ubuntu)
     apt: update_cache=yes
     changed_when: False
-    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
+    when: ansible_os_family == "Debian"
+    #when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
 
   tasks:
     - include: tasks/repo.yml
@@ -27,11 +28,13 @@
     apt:
       autoclean: yes
     changed_when: false
-    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
+    when: ansible_os_family == "Debian"
+    #when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
 
   - name: post-run | autoremove orphan packages (debian and ubuntu)
     tags: always
     apt:
       autoremove: yes
       purge: yes
-    when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
+    when: ansible_os_family == "Debian"
+    #when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
