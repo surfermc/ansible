@@ -1,0 +1,17 @@
+- name: apt | Google Linux signing key
+  apt_key: 
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub 
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: apt | add Google Earth Pro repo 
+  apt_repository:
+    repo: "deb [arch=amd64] http://dl.google.com/linux/earth/deb/ stable main"
+    filename: "google-earth-pro"
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: software | Google Earth | install package
+  tags: google earth pro
+  package:
+    name: "google-earth-pro-stable"

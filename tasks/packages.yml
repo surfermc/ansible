@@ -3,14 +3,14 @@
   package:
     state: latest
     name:
-      - bcompare
-      - code
+      # - bcompare
+      # - code
       - colordiff
       - curl
       - flatpak
       - gparted
-      - google-chrome-stable
-      - google-earth-pro-stable
+      # - google-chrome-stable
+      # - google-earth-pro-stable
       - htop
       #- lsof
       - luckybackup

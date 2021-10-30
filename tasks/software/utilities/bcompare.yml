@@ -1,0 +1,17 @@
+- name: apt | Add Scooter Software signing key
+  apt_key:
+    url: http://www.scootersoftware.com/RPM-GPG-KEY-scootersoftware
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: apt | add Beyond Compare repository
+  apt_repository:
+    repo: "deb https://www.scootersoftware.com/ bcompare4 non-free"
+    filename: "scootersoftware"
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: software | Beyond Compare | install package
+  tags: beyond compare
+  package:
+    name: "bcompare"

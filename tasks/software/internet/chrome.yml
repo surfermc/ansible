@@ -1,0 +1,17 @@
+- name: apt | Google Linux signing key
+  apt_key: 
+    url: https://dl-ssl.google.com/linux/linux_signing_key.pub 
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: apt | add Google Chrome repo
+  apt_repository:
+    repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
+    filename: "google-chrome"
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: software | Google Chrome | install package
+  tags: google chrome
+  package:
+    name: "google-chrome-stable"

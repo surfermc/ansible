@@ -1,0 +1,17 @@
+- name: apt | Add Microsoft signing key
+  apt_key:
+    url: https://packages.microsoft.com/keys/microsoft.asc
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: apt | add Microsoft VScode repo
+  apt_repository:
+    repo: "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+    filename: "vscode"
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: software | Visual Studio Code | install package
+  tags: vscode
+  package:
+    name: "code"
