@@ -6,7 +6,7 @@
 
 - name: Add ulauncher repository
   apt_repository: 
-    repo: "ppa:agornostal/ulauncher"
+    repo: "deb http://ppa.launchpad.net/agornostal/ulauncher/ubuntu focal main"
     state: present
     update_cache: no
     become: yes
