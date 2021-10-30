@@ -12,6 +12,7 @@
 #- import_tasks: software/multimedia/handbrake.yml
 #- import_tasks: software/bitwarden.yml
 - import_tasks: software/multimedia/kid3.yml
+- import_tasks: software/utilities/virtualbox.yml
 
 # Appimages
 #- import_tasks: software/openshot.yml
