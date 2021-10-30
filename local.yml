@@ -12,8 +12,8 @@
     #when: ansible_distribution in ["Debian", "Pop!_OS", "Ubuntu", "Linux Mint"]
 
   tasks:
-    - include: tasks/repo_unsigned.yml
-    - include: tasks/repo_signed.yml
+    # - include: tasks/repo_unsigned.yml
+    # - include: tasks/repo_signed.yml
 #    - include: tasks/users.yml
     - include: tasks/directories.yml
     - include: tasks/packages.yml
