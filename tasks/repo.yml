@@ -51,7 +51,8 @@
   when: ansible_os_family == "Debian"
 
 - name: Add ulauncher repository
-  apt_repository: repo='ppa:agornostal/ulauncher' 
-    state=present
+  apt_repository: 
+    repo: 'ppa:agornostal/ulauncher' 
+    state: present
     become: yes
   when: ansible_os_family == "Debian"
