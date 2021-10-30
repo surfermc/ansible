@@ -4,6 +4,13 @@
 # Microsoft VS Code
 # Scooter Software Beyond Compare
 
+- name: Add ulauncher repository
+  apt_repository: 
+    repo: "ppa:agornostal/ulauncher"
+    state: present
+    update_cache: no
+  when: ansible_os_family == "Debian"
+
 - name: apt | Google Linux signing key
   apt_key: 
     url: https://dl-ssl.google.com/linux/linux_signing_key.pub 
@@ -50,8 +57,4 @@
     state: present
   when: ansible_os_family == "Debian"
 
-- name: Add ulauncher repository
-  apt_repository: 
-    repo: "ppa:agornostal/ulauncher"
-    state: present
-  when: ansible_os_family == "Debian"
+
