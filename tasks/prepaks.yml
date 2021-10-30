@@ -13,6 +13,11 @@
 #- import_tasks: software/bitwarden.yml
 - import_tasks: software/multimedia/kid3.yml
 - import_tasks: software/utilities/virtualbox.yml
+- import_tasks: software/utilities/bcompare.yml
+- import_tasks: software/utilities/vscode.yml
+- import_tasks: software/internet/chrome.yml
+- import_tasks: software/internet/earth.yml
+
 
 # Appimages
 #- import_tasks: software/openshot.yml
