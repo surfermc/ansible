@@ -52,6 +52,6 @@
 
 - name: Add ulauncher repository
   apt_repository: 
-    repo: 'ppa:agornostal/ulauncher' 
+    repo: "ppa:agornostal/ulauncher"
     state: present
   when: ansible_os_family == "Debian"
