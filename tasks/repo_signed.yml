@@ -49,12 +49,3 @@
     filename: "scootersoftware"
     state: present
   when: ansible_os_family == "Debian"
-
-- name: Add ulauncher repository
-  apt_repository: 
-    #repo: "ppa:agornostal/ulauncher"
-    repo: "deb http://ppa.launchpad.net/agornostal/ulauncher/ubuntu focal main"
-    state: present
-    #update_cache: no
-    #validate_certs: no
-  when: ansible_os_family == "Debian"

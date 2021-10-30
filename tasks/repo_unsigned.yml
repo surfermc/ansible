@@ -1,0 +1,12 @@
+- name: Add ulauncher repository
+  apt_repository: 
+    repo: "deb http://ppa.launchpad.net/agornostal/ulauncher/ubuntu focal main"
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Add ulauncher repository
+  apt_repository: 
+    repo: "ppa:agornostal/ulauncher"
+    update_cache: False
+    validate_certs: False
+  when: ansible_os_family == "Debian"
