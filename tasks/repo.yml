@@ -9,6 +9,7 @@
     repo: "ppa:agornostal/ulauncher"
     state: present
     update_cache: no
+    become: yes
   when: ansible_os_family == "Debian"
 
 - name: apt | Google Linux signing key
