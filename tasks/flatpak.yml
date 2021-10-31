@@ -4,7 +4,7 @@
 
 - name: config | ensure flatpak repo are configured for --user
   tags: workstation-packages  
-  command: flatpak remore-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  command: flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Flatpaks
 #- import_tasks: software/multimedia/spotify.yml
