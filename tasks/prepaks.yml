@@ -17,6 +17,7 @@
 - import_tasks: software/utilities/vscode.yml
 - import_tasks: software/internet/chrome.yml
 - import_tasks: software/internet/earth.yml
+- import_tasks: software/utilities/ulauncher.yml
 
 
 # Appimages
