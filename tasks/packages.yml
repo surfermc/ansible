@@ -29,7 +29,7 @@
       - tmux
       - traceroute
       - ttf-mscorefonts-installer
-      - ulauncher  # requires ppa
+      #- ulauncher  # requires ppa
       - wget
       - whois
       - x2goclient
